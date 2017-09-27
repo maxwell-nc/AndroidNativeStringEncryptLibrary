@@ -108,7 +108,7 @@ bool validApp(JNIEnv * env,jobject contextObject){
     //正版签名hashcode，换签名请修改这个
     //忽略hashcode碰撞问题（另外有包名校验）
     //必须是使用tricks写法，直接int可以从so中静态反编译找到（容易被替换）
-    char* sign = (char[]){'-','4','9','8','5','7','6','2','6','3'};
+    char* sign = (char[]){'-','4','9','8','5','7','6','2','6','3','\0'};
     int vaildSignHash = atoi(sign);
 
     //正版包名
